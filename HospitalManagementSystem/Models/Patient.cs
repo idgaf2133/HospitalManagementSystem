@@ -13,13 +13,26 @@ namespace HospitalManagementSystem.Models
 
         [Key]
 
-        public int patientID;
-        public string name;
-        public DateTime DOB;
-        public string gender;
-        public string contact;
-        public string address;
-        public string medicalHistory;
+        public int patientID { get; set; }
+        public string name { get; set; }
+        public DateTime DOB { get; set; }
+        public string gender { get; set; }
+        public string contact { get; set; }
+        public string address { get; set; }
+        public string medicalHistory { get; set; }
+
+
+        //setting navigation properties
+
+        //many to one realtionships
+
+        public ICollection<Appointment> Appointments { get; set; } //one patient many appointments path
+        public ICollection<Billing> Bills { get; set; } //one patient many bills
+        
+        public ICollection <MedicalRecord> MedicalRecords { get; set; } //one patient many bills
+
+
+
 
 
 
