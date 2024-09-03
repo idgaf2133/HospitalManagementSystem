@@ -123,6 +123,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HospitalContext.cs" />
     <Compile Include="Models\Appointment.cs" />
     <Compile Include="Models\Billing.cs" />
     <Compile Include="Models\Doctor.cs" />

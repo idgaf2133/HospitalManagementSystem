@@ -13,7 +13,7 @@ namespace HospitalManagementSystem.Models
         [Key]
         public int BillID { get; set; }
 
-        [ForeignKey("Patient")]   //many bills to one patient
+    
         public int PatientID { get; set; }
         public Patient Patient { get; set; }
 

@@ -22,12 +22,9 @@ namespace HospitalManagementSystem.Models
 
         public int AppointmentId { get; set; }
 
-        [ForeignKey("Patient")]  //many to one 
         public int PatientID {  get; set; }//many appointments to one patient
         Patient Patient { get; set; }
 
-
-        [ForeignKey("Doctor")]
         public int DoctorId { get; set; }//many appointmnets to one doctor
         Doctor Doctor { get; set; }
 

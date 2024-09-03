@@ -11,8 +11,7 @@ namespace HospitalManagementSystem.Models
     public class Patient
     {
 
-        [Key]
-
+    
         public int patientID { get; set; }
         public string name { get; set; }
         public DateTime DOB { get; set; }
