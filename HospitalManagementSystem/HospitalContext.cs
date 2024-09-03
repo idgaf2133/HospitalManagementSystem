@@ -30,9 +30,24 @@ namespace HospitalManagementSystem
 
         //step 2 configure the database connection string
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=HospitalDB;Integrated Security=True;");
+        }
+
+        /* 
+         In the above code, the optionsBuilder.UseSqlServer() is an extension method used to configure EF to use 
+        SQL Server as the database provider by specifying a database connection string.
+
+          The string "Server=(localdb)\\mssqllocaldb; Database=SchoolDb; Trusted_Connection=True;" 
+        is a connection string to a database which we will communicate with. EF API will create the specified database if it does not exist.
+         
+         
+         */
 
 
-        //step3 
+
+        //step3: Use Fluent API to configure relationships
 
     }
 }
