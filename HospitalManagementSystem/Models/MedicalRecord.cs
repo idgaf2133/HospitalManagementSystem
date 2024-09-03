@@ -13,7 +13,7 @@ namespace HospitalManagementSystem.Models
     
         public int RecordID { get; set; }
 
-        public int PatientID { get; set; }
+        public int Records_Patient { get; set; }
         public Patient Patient { get; set; }
 
    

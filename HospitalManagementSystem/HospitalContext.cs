@@ -48,6 +48,114 @@ namespace HospitalManagementSystem
 
 
         //step3: Use Fluent API to configure relationships
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            /*Patitent has
+                * public int patientID { get; set; }
+                  public string name { get; set; }
+                  public DateTime DOB { get; set; }
+                  public string gender { get; set; }
+                  public string contact { get; set; }
+                 public string address { get; set; }
+                 public string medicalHistory { get; set; }
+
+               */
+            modelBuilder.Entity<Patient>(entity =>
+            {
+                entity.HasKey(p => p.patientID); //primary key
+                entity.Property(p => p.name).IsRequired();
+                entity.Property(p => p.DOB).IsRequired();
+                entity.Property(p => p.gender)
+                      .HasMaxLength(1)
+                      .IsRequired();
+                entity.Property(p => p.contact)
+                      .HasMaxLength(15)
+                      .IsRequired();
+                entity.Property(p => p.address)
+                      .IsRequired();
+                entity.Property(p => p.medicalHistory)
+                     .IsRequired();
+                //now configuring, the many to one relations bsed on the enitity classes+
+
+                entity.HasMany(p => p.Appointments)
+                      .WithOne(b => b.Patient)
+                      .HasForeignKey(b=> b.Appointment_PatientID);
+                entity.HasMany(p => p.Bills)
+                      .WithOne(b => b.Patient)
+                      .HasForeignKey(b => b.Bills_PatientID);
+                entity.HasMany(p => p.MedicalRecords)
+                 .WithOne(b => b.Patient)
+                 .HasForeignKey(b => b.Records_Patient);
+
+
+            });
+
+            /*
+             
+                 
+        public int DoctorId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Contact { get; set; }
+
+        public string Email { get; set; }
+        // Navigation properties
+        public ICollection<Appointment> Appointments { get; set; }  // One-to-Many with Appointment
+        public ICollection<MedicalRecord> MedicalRecords { get; set; }  // One-to-Many with MedicalRecord
+             
+             */
+
+            modelBuilder.Entity<Doctor>(entity =>
+
+            {
+
+                entity.HasKey(d => d.DoctorId);  // Primary key
+                entity.Property(d => d.Name).IsRequired();  // Required field
+
+                entity.Property(d => d.Description).IsRequired();
+                entity.Property(d=>d.Contact).IsRequired();
+
+                entity.HasMany(d => d.Appointments)  // One-to-Many with Appointments
+                      .WithOne(a => a.Doctor)
+                      .HasForeignKey(a => a.Appointment_Doctor);
+
+                entity.HasMany(d => d.MedicalRecords)  // One-to-Many with MedicalRecords
+                      .WithOne(m => m.Doctor)
+                      .HasForeignKey(m => m.DoctorID);
+
+                // Configure Appointment entity
+      
+
+            }
+            
+            );
+
+            modelBuilder.Entity<Appointment>(entity =>
+            {
+                entity.HasKey(a => a.AppointmentId);  // Primary key
+                entity.Property(a => a.Status).IsRequired();  // Required field
+            });
+
+            // Configure Billing entity
+            modelBuilder.Entity<Billing>(entity =>
+            {
+                entity.HasKey(b => b.BillID);  // Primary key
+                entity.Property(b => b.Amount).IsRequired();  // Required field
+            });
+
+            // Configure MedicalRecord entity
+            modelBuilder.Entity<MedicalRecord>(entity =>
+            {
+                entity.HasKey(m => m.RecordID);  // Primary key
+                entity.Property(m => m.Diagnosis).IsRequired();  // Required field
+            });
+
+
+
+
+        }
+
 
     }
 }

@@ -14,7 +14,7 @@ namespace HospitalManagementSystem.Models
         public int BillID { get; set; }
 
     
-        public int PatientID { get; set; }
+        public int Bills_PatientID { get; set; }
         public Patient Patient { get; set; }
 
         public decimal Amount { get; set; }

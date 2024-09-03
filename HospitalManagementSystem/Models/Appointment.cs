@@ -18,15 +18,14 @@ namespace HospitalManagementSystem.Models
         //get and set the table value;
         //get set the path using a forign key object'
 
-        [Key]
-
+      
         public int AppointmentId { get; set; }
 
-        public int PatientID {  get; set; }//many appointments to one patient
-        Patient Patient { get; set; }
+        public int Appointment_PatientID {  get; set; }//many appointments to one patient
+        public Patient Patient { get; set; }
 
-        public int DoctorId { get; set; }//many appointmnets to one doctor
-        Doctor Doctor { get; set; }
+        public int Appointment_Doctor { get; set; }//many appointmnets to one doctor
+        public Doctor Doctor { get; set; }
 
         public DateTime AppointMentDate { get; set; }
 
