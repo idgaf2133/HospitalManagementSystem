@@ -36,7 +36,7 @@ namespace HospitalManagementSystem
         }
 
         /* 
-         In the above code, the optionsBuilder.UseSqlServer() is an extension method used to configure EF to use 
+         In the above code, the optionsBuilder.UseSql--Server() is an extension method used to configure EF to use 
         SQL Server as the database provider by specifying a database connection string.
 
           The string "Server=(localdb)\\mssqllocaldb; Database=SchoolDb; Trusted_Connection=True;" 
