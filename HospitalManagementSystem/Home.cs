@@ -10,11 +10,28 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
+
+
+             
+
+            
         }
+
+        private void btnManagePatients_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnManageDoctors_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
