@@ -70,6 +70,11 @@ namespace HospitalManagementSystem.Services
 
 
             }
+            else
+            {
+
+                throw new ArgumentException("Patient not Found");
+            }
         }
 
         //getting single patient by ID

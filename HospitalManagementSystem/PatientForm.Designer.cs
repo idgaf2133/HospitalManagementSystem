@@ -50,21 +50,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(244, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(195, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(511, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(593, 278);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-
             // 
             // btnAddPatient
             // 
-            this.btnAddPatient.Location = new System.Drawing.Point(210, 345);
+            this.btnAddPatient.Location = new System.Drawing.Point(31, 12);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(102, 49);
+            this.btnAddPatient.Size = new System.Drawing.Size(115, 55);
             this.btnAddPatient.TabIndex = 2;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = true;
@@ -90,12 +89,13 @@
             // 
             // btnDeletePatient
             // 
-            this.btnDeletePatient.Location = new System.Drawing.Point(674, 345);
+            this.btnDeletePatient.Location = new System.Drawing.Point(45, 345);
             this.btnDeletePatient.Name = "btnDeletePatient";
-            this.btnDeletePatient.Size = new System.Drawing.Size(98, 49);
+            this.btnDeletePatient.Size = new System.Drawing.Size(116, 61);
             this.btnDeletePatient.TabIndex = 5;
             this.btnDeletePatient.Text = "Delete Patient";
             this.btnDeletePatient.UseVisualStyleBackColor = true;
+            this.btnDeletePatient.Click += new System.EventHandler(this.btnDeletePatient_Click);
             // 
             // txtDOB
             // 

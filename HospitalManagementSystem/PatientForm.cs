@@ -1,4 +1,5 @@
-﻿using HospitalManagementSystem.Models;
+﻿using HospitalManagementSystem.Helpers;
+using HospitalManagementSystem.Models;
 using HospitalManagementSystem.Services;
 using System;
 using System.Collections.Generic;
@@ -106,6 +107,41 @@ namespace HospitalManagementSystem
                 txtContact.Text = patient.contact;
                 txtAddress.Text = patient.address;
             }
+        }
+
+        private void btnDeletePatient_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Show input dialog to enter the Patient ID
+                string input = InputBox.Show("Please enter Patient ID:", "Delete Patient");
+
+                // Check if input is valid and parse the Patient ID
+                if (!string.IsNullOrEmpty(input) && int.TryParse(input, out int patientID))
+                {
+                    // Call the service method to delete the patient
+                    patientServices.RemovePatient(patientID);
+
+                    // Refresh the DataGridView to reflect the deletion
+                    LoadPatients();
+
+                    MessageBox.Show("Patient deleted successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid Patient ID.");
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+
+
         }
     }
 }
