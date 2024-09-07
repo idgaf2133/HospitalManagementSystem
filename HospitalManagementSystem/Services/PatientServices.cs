@@ -100,8 +100,21 @@ namespace HospitalManagementSystem.Services
         public void UpdatePatient(Patient patient)
         {
 
-            _context.Patients.Update(patient);
-            _context.SaveChanges();
+            var existingPatient = _context.Patients.Find(patient.patientID);
+            if (existingPatient != null)
+            {
+                existingPatient.name = patient.name;
+                existingPatient.DOB = patient.DOB;
+                existingPatient.gender = patient.gender;
+                existingPatient.contact = patient.contact;
+                existingPatient.address = patient.address;
+
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException("Patient not found.");
+            }
         }
 
 

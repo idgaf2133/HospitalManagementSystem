@@ -30,7 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddPatient = new System.Windows.Forms.Button();
-            this.btnReadPatient = new System.Windows.Forms.Button();
             this.btnUpdatePatient = new System.Windows.Forms.Button();
             this.btnDeletePatient = new System.Windows.Forms.Button();
             this.txtDOB = new System.Windows.Forms.TextBox();
@@ -50,48 +49,40 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(195, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(233, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(593, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 340);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // btnAddPatient
             // 
-            this.btnAddPatient.Location = new System.Drawing.Point(31, 12);
+            this.btnAddPatient.Location = new System.Drawing.Point(50, 21);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(115, 55);
+            this.btnAddPatient.Size = new System.Drawing.Size(109, 43);
             this.btnAddPatient.TabIndex = 2;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = true;
             this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
-            // btnReadPatient
-            // 
-            this.btnReadPatient.Location = new System.Drawing.Point(373, 345);
-            this.btnReadPatient.Name = "btnReadPatient";
-            this.btnReadPatient.Size = new System.Drawing.Size(98, 49);
-            this.btnReadPatient.TabIndex = 3;
-            this.btnReadPatient.Text = "Read Patient";
-            this.btnReadPatient.UseVisualStyleBackColor = true;
-            // 
             // btnUpdatePatient
             // 
-            this.btnUpdatePatient.Location = new System.Drawing.Point(514, 345);
+            this.btnUpdatePatient.Location = new System.Drawing.Point(614, 400);
             this.btnUpdatePatient.Name = "btnUpdatePatient";
-            this.btnUpdatePatient.Size = new System.Drawing.Size(98, 49);
+            this.btnUpdatePatient.Size = new System.Drawing.Size(105, 51);
             this.btnUpdatePatient.TabIndex = 4;
             this.btnUpdatePatient.Text = "Update Patient ";
             this.btnUpdatePatient.UseVisualStyleBackColor = true;
+            this.btnUpdatePatient.Click += new System.EventHandler(this.btnUpdatePatient_Click);
             // 
             // btnDeletePatient
             // 
-            this.btnDeletePatient.Location = new System.Drawing.Point(45, 345);
+            this.btnDeletePatient.Location = new System.Drawing.Point(337, 400);
             this.btnDeletePatient.Name = "btnDeletePatient";
-            this.btnDeletePatient.Size = new System.Drawing.Size(116, 61);
+            this.btnDeletePatient.Size = new System.Drawing.Size(133, 51);
             this.btnDeletePatient.TabIndex = 5;
             this.btnDeletePatient.Text = "Delete Patient";
             this.btnDeletePatient.UseVisualStyleBackColor = true;
@@ -189,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(904, 516);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -203,7 +194,6 @@
             this.Controls.Add(this.txtDOB);
             this.Controls.Add(this.btnDeletePatient);
             this.Controls.Add(this.btnUpdatePatient);
-            this.Controls.Add(this.btnReadPatient);
             this.Controls.Add(this.btnAddPatient);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PatientForm";
@@ -216,7 +206,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnAddPatient;
-        private System.Windows.Forms.Button btnReadPatient;
         private System.Windows.Forms.Button btnUpdatePatient;
         private System.Windows.Forms.Button btnDeletePatient;
         private System.Windows.Forms.TextBox txtDOB;
