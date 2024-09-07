@@ -24,7 +24,8 @@ namespace HospitalManagementSystem
 
         private void btnManagePatients_Click(object sender, EventArgs e)
         {
-
+            PatientForm patientForm = new PatientForm();
+            patientForm.ShowDialog();
         }
 
         private void btnManageDoctors_Click(object sender, EventArgs e)
@@ -32,6 +33,14 @@ namespace HospitalManagementSystem
 
         }
 
+        private void btnManageAppointments_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnManageBilling_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -39,9 +39,10 @@
             // btnManagePatients
             // 
             btnManagePatients.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            btnManagePatients.Location = new System.Drawing.Point(174, 32);
+            btnManagePatients.Location = new System.Drawing.Point(232, 39);
+            btnManagePatients.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             btnManagePatients.Name = "btnManagePatients";
-            btnManagePatients.Size = new System.Drawing.Size(127, 48);
+            btnManagePatients.Size = new System.Drawing.Size(169, 59);
             btnManagePatients.TabIndex = 0;
             btnManagePatients.Text = "Manage Patients";
             btnManagePatients.UseVisualStyleBackColor = false;
@@ -50,9 +51,10 @@
             // btnManageDoctors
             // 
             this.btnManageDoctors.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnManageDoctors.Location = new System.Drawing.Point(376, 32);
+            this.btnManageDoctors.Location = new System.Drawing.Point(501, 39);
+            this.btnManageDoctors.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManageDoctors.Name = "btnManageDoctors";
-            this.btnManageDoctors.Size = new System.Drawing.Size(122, 48);
+            this.btnManageDoctors.Size = new System.Drawing.Size(163, 59);
             this.btnManageDoctors.TabIndex = 1;
             this.btnManageDoctors.Text = "Manage Doctors";
             this.btnManageDoctors.UseVisualStyleBackColor = false;
@@ -61,33 +63,38 @@
             // btnManageAppointments
             // 
             this.btnManageAppointments.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnManageAppointments.Location = new System.Drawing.Point(155, 107);
+            this.btnManageAppointments.Location = new System.Drawing.Point(207, 132);
+            this.btnManageAppointments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManageAppointments.Name = "btnManageAppointments";
-            this.btnManageAppointments.Size = new System.Drawing.Size(157, 43);
+            this.btnManageAppointments.Size = new System.Drawing.Size(209, 53);
             this.btnManageAppointments.TabIndex = 2;
             this.btnManageAppointments.Text = "ManageAppointments";
             this.btnManageAppointments.UseVisualStyleBackColor = false;
+            this.btnManageAppointments.Click += new System.EventHandler(this.btnManageAppointments_Click);
             // 
             // btnManageBilling
             // 
             this.btnManageBilling.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnManageBilling.Location = new System.Drawing.Point(376, 107);
+            this.btnManageBilling.Location = new System.Drawing.Point(501, 132);
+            this.btnManageBilling.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnManageBilling.Name = "btnManageBilling";
-            this.btnManageBilling.Size = new System.Drawing.Size(177, 43);
+            this.btnManageBilling.Size = new System.Drawing.Size(236, 53);
             this.btnManageBilling.TabIndex = 3;
             this.btnManageBilling.Text = "Manage Billing";
             this.btnManageBilling.UseVisualStyleBackColor = false;
+            this.btnManageBilling.Click += new System.EventHandler(this.btnManageBilling_Click);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(699, 392);
+            this.ClientSize = new System.Drawing.Size(932, 482);
             this.Controls.Add(this.btnManageBilling);
             this.Controls.Add(this.btnManageAppointments);
             this.Controls.Add(this.btnManageDoctors);
             this.Controls.Add(btnManagePatients);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Home";
             this.Text = "Hospital Management System";
             this.ResumeLayout(false);

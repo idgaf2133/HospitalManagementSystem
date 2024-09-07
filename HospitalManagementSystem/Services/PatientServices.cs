@@ -30,8 +30,23 @@ namespace HospitalManagementSystem.Services
 
         public void AddPatient(Patient Patient)
         {
-            _context.Patients.Add(Patient);
-            _context.SaveChanges();
+            try
+            {
+
+                _context.Patients.Add(Patient);
+                _context.SaveChanges();
+
+
+            }
+            catch (Exception ex) 
+            {
+
+                // Log the exception or handle it as needed
+                throw new ApplicationException("There was a problem adding the patient.", ex);
+
+
+
+            }
         }
 
         //deleting a patient by Id
