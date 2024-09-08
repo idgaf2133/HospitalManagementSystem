@@ -23,7 +23,7 @@ namespace HospitalManagementSystem
         HospitalContext hospitalContext;
         public PatientForm()
         {
-            
+            //load the conponentrs first.
             InitializeComponent();
             hospitalContext = new HospitalContext();    
            patientServices = new PatientServices(hospitalContext);

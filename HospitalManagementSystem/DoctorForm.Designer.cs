@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.textDescription = new System.Windows.Forms.TextBox();
+            this.textContact = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
             this.descriptiontxt = new System.Windows.Forms.Label();
             this.contacttxt = new System.Windows.Forms.Label();
             this.emailtxt = new System.Windows.Forms.Label();
@@ -40,44 +40,45 @@
             this.btnaddDoctor = new System.Windows.Forms.Button();
             this.btnDeleteDoctor = new System.Windows.Forms.Button();
             this.btnUpdateDoctor = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(320, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(368, 218);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(320, 46);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(368, 218);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
-            // textBox1
+            // textName
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.textName.Location = new System.Drawing.Point(131, 65);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(100, 20);
+            this.textName.TabIndex = 1;
             // 
-            // textBox2
+            // textDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.textDescription.Location = new System.Drawing.Point(131, 107);
+            this.textDescription.Name = "textDescription";
+            this.textDescription.Size = new System.Drawing.Size(100, 20);
+            this.textDescription.TabIndex = 2;
             // 
-            // textBox3
+            // textContact
             // 
-            this.textBox3.Location = new System.Drawing.Point(131, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.textContact.Location = new System.Drawing.Point(131, 171);
+            this.textContact.Name = "textContact";
+            this.textContact.Size = new System.Drawing.Size(100, 20);
+            this.textContact.TabIndex = 3;
             // 
-            // textBox4
+            // textEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(131, 229);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
+            this.textEmail.Location = new System.Drawing.Point(131, 229);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(100, 20);
+            this.textEmail.TabIndex = 4;
             // 
             // descriptiontxt
             // 
@@ -93,9 +94,9 @@
             this.contacttxt.AutoSize = true;
             this.contacttxt.Location = new System.Drawing.Point(43, 178);
             this.contacttxt.Name = "contacttxt";
-            this.contacttxt.Size = new System.Drawing.Size(43, 13);
+            this.contacttxt.Size = new System.Drawing.Size(44, 13);
             this.contacttxt.TabIndex = 7;
-            this.contacttxt.Text = "contact";
+            this.contacttxt.Text = "Contact";
             // 
             // emailtxt
             // 
@@ -154,14 +155,14 @@
             this.Controls.Add(this.emailtxt);
             this.Controls.Add(this.contacttxt);
             this.Controls.Add(this.descriptiontxt);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.textContact);
+            this.Controls.Add(this.textDescription);
+            this.Controls.Add(this.textName);
+            this.Controls.Add(this.dataGridView2);
             this.Name = "DoctorForm";
             this.Text = "DoctorForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,11 +170,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.TextBox textDescription;
+        private System.Windows.Forms.TextBox textContact;
+        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label descriptiontxt;
         private System.Windows.Forms.Label contacttxt;
         private System.Windows.Forms.Label emailtxt;
