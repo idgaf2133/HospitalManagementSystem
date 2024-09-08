@@ -143,6 +143,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForm.Designer.cs">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\InputBox.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -174,6 +180,9 @@
     <Compile Include="Services\DoctorService.cs" />
     <Compile Include="Services\MedicalRecordService.cs" />
     <Compile Include="Services\PatientServices.cs" />
+    <EmbeddedResource Include="DoctorForm.resx">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>

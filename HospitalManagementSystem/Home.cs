@@ -30,7 +30,8 @@ namespace HospitalManagementSystem
 
         private void btnManageDoctors_Click(object sender, EventArgs e)
         {
-
+            DoctorForm doctorForm = new DoctorForm();
+           doctorForm.ShowDialog();
         }
 
         private void btnManageAppointments_Click(object sender, EventArgs e)
