@@ -54,7 +54,22 @@ namespace HospitalManagementSystem.Services
         public void UpdateDoctor(Doctor doctor)
         {
 
-            _context.Doctors.Update(doctor);
+            var existingDoctor = _context.Doctors.Find(doctor.DoctorId);
+            if (existingDoctor != null)
+            {
+                existingDoctor.Name = doctor.Name;
+                existingDoctor.Description = doctor.Description;
+                existingDoctor.Contact = doctor.Contact;
+                existingDoctor.Email = doctor.Email;
+              
+
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException("Doctor not found.");
+            }
+
 
         }
         //deelete an exisiting doctor from id

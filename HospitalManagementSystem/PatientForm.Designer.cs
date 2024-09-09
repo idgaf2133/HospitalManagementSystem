@@ -60,9 +60,9 @@
             // 
             // btnAddPatient
             // 
-            this.btnAddPatient.Location = new System.Drawing.Point(50, 21);
+            this.btnAddPatient.Location = new System.Drawing.Point(37, 338);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(109, 43);
+            this.btnAddPatient.Size = new System.Drawing.Size(143, 71);
             this.btnAddPatient.TabIndex = 2;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = true;

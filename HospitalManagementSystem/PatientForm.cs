@@ -27,8 +27,10 @@ namespace HospitalManagementSystem
             InitializeComponent();
             hospitalContext = new HospitalContext();    
            patientServices = new PatientServices(hospitalContext);
+            
            LoadPatients();
-         
+        
+
         }
 
         private void LoadPatients()
