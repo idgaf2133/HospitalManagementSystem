@@ -1,4 +1,5 @@
 ﻿using HospitalManagementSystem.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,13 +27,19 @@ namespace HospitalManagementSystem.Services
         // Read all appointments
         public List<Appointment> GetAllAppointments()
         {
-            return _context.Appointments.ToList();
+            return _context.Appointments
+           .Include(a => a.Patient) // Include related Patient
+           .Include(a => a.Doctor)  // Include related Doctor
+           .ToList();
         }
 
         // Read a single appointment by ID
-        public Appointment GetAppointmentById(int id)
+        public Appointment GetAppointmentById(int appointmentId)
         {
-            return _context.Appointments.Find(id);
+            return _context.Appointments
+           .Include(a => a.Patient)
+           .Include(a => a.Doctor)
+           .FirstOrDefault(a => a.AppointmentId == appointmentId);
         }
 
         // Update an existing appointment

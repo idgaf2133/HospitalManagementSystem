@@ -36,7 +36,8 @@ namespace HospitalManagementSystem
 
         private void btnManageAppointments_Click(object sender, EventArgs e)
         {
-
+            AppointmentForm appointmentForm = new AppointmentForm();    
+            appointmentForm.ShowDialog();
         }
 
         private void btnManageBilling_Click(object sender, EventArgs e)
